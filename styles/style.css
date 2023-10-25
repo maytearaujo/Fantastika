@@ -26,6 +26,10 @@ header {
   width: 12%;
 }
 
+.logo a{
+  color: #f4f2f3;
+  text-decoration: none;
+}
 nav {
   display: flex;
   justify-content: end;
@@ -70,57 +74,26 @@ h1 {
   font-weight: bold;
 }
 
-.faleConosco {
-  height: 100vw;
+section {
+  height: 100vh;
   width: 100%;
 
+  padding: 2em;
+}
+
+.banhoTosa {
   color: #252525;
   display: flex;
-  /* justify-content: space-evenly; */
-  padding: 2em;
 
   background-image: url("../assets/cachorro-marom.png");
-  background-size: auto;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: top;
-  background-color: #f4f2f3;
-
-  border: solid red;
+  /* background-color: #f4f2f3; */
 }
 
-.txt-faleConosco{
-  padding: 2em;
-  width: 38%;
-  padding: 1em 0;
-  left: 80%;
-}
-
-.txt-faleConosco p{
-  padding: 1em 0;
-}
-
-.txt-faleConosco a{
-  width: 250px;
-  border-radius: 50px;
-  background-color: #3A342F;
-  color: #F4F2F3;
-  font-size: 27px;
-  font-weight: bold;
-  padding: 1.2em;
-  text-decoration: none;
-}
-
-.img-faleConosco{
-  /* width: 50%; */
-  /* background-image: url("../assets/cachorro-marom.png");
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-color: #f4f2f3; */
-
-}
-
-.faleConosco div {
+.banhoTosa div,
+.mordomiaSaudavel div {
   height: 100vh;
 
   display: flex;
@@ -128,10 +101,113 @@ h1 {
   justify-content: center;
 }
 
-.faleConosco div h2{
+.banhoTosa div h2,
+.mordomiaSaudavel div h2 {
   font-size: 49px;
 }
 
-.faleConosco div p{
+.banhoTosa div p,
+.mordomiaSaudavel div p {
   font-size: 27px;
+}
+
+.txt-banhoTosa {
+  width: 38%;
+  padding: 1em 0;
+  left: 80%;
+}
+
+.txt-banhoTosa p,
+.txt-mordomiaSaudavel p {
+  padding: 1em 0;
+}
+
+.btn-faleConosco {
+  width: 250px;
+  border-radius: 50px;
+  font-size: 27px;
+  font-weight: bold;
+  padding: 1.2em;
+  text-decoration: none;
+}
+
+.txt-banhoTosa a {
+  background-color: #3a342f;
+  color: #f4f2f3;
+}
+
+.mordomiaSaudavel {
+  color: #ffffff;
+  display: flex;
+  justify-content: end;
+
+  background-image: url("../assets/cachorro-preto.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: #fd6a9a;
+}
+
+.txt-mordomiaSaudavel {
+  /* padding: 2em; */
+  width: 30%;
+  padding: 1em;
+  right: 20%;
+  margin-right: 10%;
+  font-weight: normal;
+}
+
+.txt-mordomiaSaudavel a {
+  background-color: #fff;
+  color: #3a342f;
+}
+
+.apoio {
+  height: 112px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.apoio p {
+  color: #fd6a9a;
+  font-size: 24px;
+  font-style: italic;
+}
+
+.apoio img {
+  height: 25px;
+  width: 172px;
+}
+
+footer{
+  background-color: #EB4A7B;
+  display: flex;
+  justify-content: flex-start;
+  padding: 2em 5em;
+  height: 314px;
+}
+
+.atendimento,
+.sobre,
+.unidades{
+  padding: 1em;
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.itens{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80%;
+}
+
+.itens a{
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
 }
