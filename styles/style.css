@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +11,7 @@ body {
   color: #ffffff;
 }
 
+/* header */
 header {
   background-color: #252525;
   width: 100%;
@@ -21,29 +24,39 @@ header {
 
 .logo {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 12%;
+  width: 40%;
 }
 
-.logo a{
+.logo a {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
   color: #f4f2f3;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 0.32px;
   text-decoration: none;
 }
-nav {
+
+.redesSociais {
   display: flex;
   justify-content: end;
   align-items: start;
-  width: 80%;
+  width: 50%;
 }
-nav img {
-  margin-left: 1em;
+
+.instagram,
+.youtube {
+  visibility: hidden;
 }
 
 header img {
   height: 30px;
 }
 
+/* banner */
 .banner {
   width: 100%;
   height: 100vh;
@@ -59,9 +72,9 @@ header img {
 
 .capa {
   position: absolute;
-  top: 165px;
+  top: 110px;
 
-  height: 240px;
+  height: 260px;
 
   display: flex;
   align-items: center;
@@ -70,8 +83,10 @@ header img {
 }
 
 h1 {
-  font-size: 51px;
+  font-size: 2.8em;
   font-weight: bold;
+  text-align: center;
+  padding: 0 1em;
 }
 
 section {
@@ -86,35 +101,43 @@ section {
   display: flex;
 
   background-image: url("../assets/cachorro-marom.png");
-  background-size: 100% 100%;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: top;
-  /* background-color: #f4f2f3; */
+  background-position: bottom;
+  background-position-x: -140px;
+  background-color: #f4f2f3;
+}
+
+
+
+.banhoTosa,
+.mordomiaSaudavel {
+  height: 120vh;
 }
 
 .banhoTosa div,
 .mordomiaSaudavel div {
-  height: 100vh;
+  height: 130vh;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .banhoTosa div h2,
 .mordomiaSaudavel div h2 {
-  font-size: 49px;
+  font-size: 2.5em;
 }
 
 .banhoTosa div p,
 .mordomiaSaudavel div p {
-  font-size: 27px;
+  font-size: 1.29em;
 }
 
 .txt-banhoTosa {
-  width: 38%;
-  padding: 1em 0;
-  left: 80%;
+  width: 88%;
+  padding: .8em 0;
+  /* left: 80%; */
 }
 
 .txt-banhoTosa p,
@@ -123,9 +146,9 @@ section {
 }
 
 .btn-faleConosco {
-  width: 250px;
+  width: 9em;
   border-radius: 50px;
-  font-size: 27px;
+  font-size: 1em;
   font-weight: bold;
   padding: 1.2em;
   text-decoration: none;
@@ -149,8 +172,7 @@ section {
 }
 
 .txt-mordomiaSaudavel {
-  /* padding: 2em; */
-  width: 30%;
+  /* width: 30%; */
   padding: 1em;
   right: 20%;
   margin-right: 10%;
@@ -179,8 +201,8 @@ section {
   width: 172px;
 }
 
-footer{
-  background-color: #EB4A7B;
+footer {
+  background-color: #eb4a7b;
   display: flex;
   justify-content: flex-start;
   padding: 2em 5em;
@@ -189,7 +211,7 @@ footer{
 
 .atendimento,
 .sobre,
-.unidades{
+.unidades {
   padding: 1em;
   width: 25%;
   height: 100%;
@@ -199,15 +221,195 @@ footer{
   height: 100%;
 }
 
-.itens{
+.itens {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 80%;
 }
 
-.itens a{
+.itens a {
   text-decoration: none;
   font-size: 14px;
   color: #fff;
+}
+
+@media (min-width: 501px) {
+  body {
+    background-color: purple;
+  }
+  /* header */
+  .logo {
+    width: 14%;
+  }
+
+  .redesSociais {
+    width: 80%;
+  }
+
+  .redesSociais img {
+    margin-left: 1em;
+  }
+
+  .instagram,
+  .youtube {
+    visibility: visible;
+  }
+
+  /* banner */
+  .capa {
+    top: 160px;
+  }
+
+  h1 {
+    width: 480px;
+  }
+
+  /* seções */
+
+  .mordomiaSaudavel {
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: color-mix(
+      in srgb,
+      rgba(235, 74, 123, 1) 35%,
+      rgba(253, 106, 154, 1) 100%
+    );
+  }
+
+  .banhoTosa {
+    color: #252525;
+    display: flex;
+  
+    background-image: url("../assets/cachorro-marom.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    /* background-color: #f4f2f3; */
+  }
+  
+  .banhoTosa div,
+  .mordomiaSaudavel div {
+    height: 100vh;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .banhoTosa div h2,
+  .mordomiaSaudavel div h2 {
+    font-size: 49px;
+  }
+  
+  .banhoTosa div p,
+  .mordomiaSaudavel div p {
+    font-size: 27px;
+  }
+  
+  .txt-banhoTosa {
+    width: 38%;
+    padding: 1em 0;
+    left: 80%;
+  }
+  
+  .txt-banhoTosa p,
+  .txt-mordomiaSaudavel p {
+    padding: 1em 0;
+  }
+  
+  .btn-faleConosco {
+    width: 250px;
+    border-radius: 50px;
+    font-size: 27px;
+    font-weight: bold;
+    padding: 1.2em;
+    text-decoration: none;
+  }
+  
+  .txt-banhoTosa a {
+    background-color: #3a342f;
+    color: #f4f2f3;
+  }
+  
+  .mordomiaSaudavel {
+    color: #ffffff;
+    display: flex;
+    justify-content: end;
+  
+    background-image: url("../assets/cachorro-preto.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: #fd6a9a;
+  }
+  
+  .txt-mordomiaSaudavel {
+    /* padding: 2em; */
+    width: 30%;
+    padding: 1em;
+    right: 20%;
+    margin-right: 10%;
+    font-weight: normal;
+  }
+  
+  .txt-mordomiaSaudavel a {
+    background-color: #fff;
+    color: #3a342f;
+  }
+  
+  .apoio {
+    height: 112px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .apoio p {
+    color: #fd6a9a;
+    font-size: 24px;
+    font-style: italic;
+  }
+  
+  .apoio img {
+    height: 25px;
+    width: 172px;
+  }
+  
+  footer{
+    background-color: #EB4A7B;
+    display: flex;
+    justify-content: flex-start;
+    padding: 2em 5em;
+    height: 314px;
+  }
+  
+  .atendimento,
+  .sobre,
+  .unidades{
+    padding: 1em;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .itens{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+  }
+  
+  .itens a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+  }
+}
+
+.border {
+  border: solid green;
 }
