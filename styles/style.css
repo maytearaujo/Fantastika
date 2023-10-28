@@ -23,13 +23,11 @@ header {
 }
 
 .logo {
-  /* display: flex; */
   width: 40%;
 }
 
 .logo a,
 .logo-footer a {
-  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -60,7 +58,8 @@ header {
 /* banner */
 .banner {
   width: 100%;
-  height: 100vh;
+  height: 120vh;
+
   background-image: url("../assets/cachorro-rosa.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -90,27 +89,16 @@ h1 {
   padding: 0 1em;
 }
 
-section {
-  height: 100vh;
-  width: 100%;
-
-  padding: 2em;
-}
-
-.banhoTosa,
-.mordomiaSaudavel {
-  height: 140vh;
-}
-
 .banhoTosa {
+  height: 180vh;
+  padding: 2em;
+
   color: #252525;
-  display: flex;
 
   background-image: url("../assets/cachorro-marrom.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
-  background-color: #f4f2f3;
 }
 
 .banhoTosa div,
@@ -129,9 +117,9 @@ section {
   font-size: 1.29em;
 }
 
-.txt-banhoTosa {
-  width: 88%;
-  padding: 0.8em 0;
+.txt-banhoTosa,
+.txt-mordomiaSaudavel {
+  width: 86.7%;
 }
 
 .txt-banhoTosa p,
@@ -144,8 +132,9 @@ section {
   border-radius: 50px;
   font-size: 1em;
   font-weight: bold;
-  padding: 1.2em;
+  padding: 1em;
   text-decoration: none;
+  text-align: center;
 }
 
 .txt-banhoTosa a {
@@ -154,8 +143,9 @@ section {
 }
 
 .mordomiaSaudavel {
+  height: 180vh;
+
   color: #ffffff;
-  display: flex;
 
   background-image: url("../assets/cachorro-preto.png");
   background-size: cover;
@@ -164,8 +154,7 @@ section {
 }
 
 .txt-mordomiaSaudavel {
-  padding: 1em;
-  font-weight: normal;
+  padding: 2em;
 }
 
 .txt-mordomiaSaudavel a {
@@ -214,7 +203,7 @@ footer nav {
 
 footer nav div {
   width: 60%;
-  padding: 1.5em 1em;
+  padding: 1em;
 }
 
 .logo-footer img {
@@ -258,9 +247,6 @@ h3 {
 }
 
 @media (min-width: 501px) {
-  body {
-    /* background-color: purple; */
-  }
   /* header */
   .logo {
     width: 14%;
@@ -301,16 +287,8 @@ h3 {
     width: 480px;
   }
 
-  /* seções */
-
-  section {
-    height: 100vh;
-    width: 100%;
-  
-    padding: 2em;
-  }
-
   .mordomiaSaudavel {
+    height: 100vh;
     background-size: 100% 50%;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -319,12 +297,11 @@ h3 {
   .banhoTosa {
     color: #252525;
     display: flex;
-
+    height: 100vh;
     background-image: url("../assets/cachorro-marrom-desktop.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: top;
-    /* background-color: #f4f2f3; */
   }
 
   .banhoTosa div,
@@ -358,12 +335,13 @@ h3 {
   }
 
   .btn-faleConosco {
-    width: 250px;
+    width: 220px;
     border-radius: 50px;
     font-size: 27px;
     font-weight: bold;
-    padding: 1.2em;
+    padding: 1em;
     text-decoration: none;
+    text-align: center;
   }
 
   .txt-banhoTosa a {
@@ -384,7 +362,6 @@ h3 {
   }
 
   .txt-mordomiaSaudavel {
-    /* padding: 2em; */
     width: 30%;
     padding: 1em;
     right: 20%;
@@ -400,6 +377,7 @@ h3 {
   .apoio {
     height: 112px;
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
   }
@@ -408,6 +386,12 @@ h3 {
     color: #fd6a9a;
     font-size: 24px;
     font-style: italic;
+  }
+
+  .img-apoio {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
   }
 
   .apoio img {
@@ -425,7 +409,7 @@ h3 {
   }
 
   footer nav div{
-    /* padding: 0; */
+    padding: 0;
   }
 
   .logo-footer,
@@ -434,25 +418,32 @@ h3 {
   }
 
   footer{
-    height: 60vh;
+    height: 50vh;
   }
   .atendimento,
   .sobre,
   .unidades {
-    /* padding: 1em; */
-    width: 30%;
+    width: 20%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    align-items: start;
   }
 
   .itens {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    /* height: 80%; */
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    width: 150px;
+  }
+
+  .itens h3{
+    border: 0;
+    text-align: start;
   }
 
   .itens a {
@@ -460,8 +451,4 @@ h3 {
     font-size: 14px;
     color: #fff;
   }
-}
-
-.border {
-  border: solid green;
 }
