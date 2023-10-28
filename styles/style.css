@@ -23,11 +23,12 @@ header {
 }
 
 .logo {
-  display: flex;
+  /* display: flex; */
   width: 40%;
 }
 
-.logo a {
+.logo a,
+.logo-footer a {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -47,12 +48,12 @@ header {
   width: 50%;
 }
 
-.instagram,
-.youtube {
+.redesSociais .instagram,
+.redesSociais .youtube {
   visibility: hidden;
 }
 
-header img {
+.logo img {
   height: 30px;
 }
 
@@ -96,32 +97,26 @@ section {
   padding: 2em;
 }
 
+.banhoTosa,
+.mordomiaSaudavel {
+  height: 140vh;
+}
+
 .banhoTosa {
   color: #252525;
   display: flex;
 
-  background-image: url("../assets/cachorro-marom.png");
-  background-size: contain;
+  background-image: url("../assets/cachorro-marrom.png");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
-  background-position-x: -140px;
   background-color: #f4f2f3;
-}
-
-
-
-.banhoTosa,
-.mordomiaSaudavel {
-  height: 120vh;
 }
 
 .banhoTosa div,
 .mordomiaSaudavel div {
-  height: 130vh;
-
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
 }
 
 .banhoTosa div h2,
@@ -136,8 +131,7 @@ section {
 
 .txt-banhoTosa {
   width: 88%;
-  padding: .8em 0;
-  /* left: 80%; */
+  padding: 0.8em 0;
 }
 
 .txt-banhoTosa p,
@@ -162,20 +156,15 @@ section {
 .mordomiaSaudavel {
   color: #ffffff;
   display: flex;
-  justify-content: end;
 
   background-image: url("../assets/cachorro-preto.png");
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
-  background-color: #fd6a9a;
+  background-position: bottom;
 }
 
 .txt-mordomiaSaudavel {
-  /* width: 30%; */
   padding: 1em;
-  right: 20%;
-  margin-right: 10%;
   font-weight: normal;
 }
 
@@ -184,12 +173,21 @@ section {
   color: #3a342f;
 }
 
+/* apoio */
 .apoio {
-  height: 112px;
+  height: 218px;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
+
+.img-apoio {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
 .apoio p {
   color: #fd6a9a;
   font-size: 24px;
@@ -201,42 +199,67 @@ section {
   width: 172px;
 }
 
+/* footer */
 footer {
   background-color: #eb4a7b;
+  height: 200vh;
+}
+
+footer nav {
   display: flex;
-  justify-content: flex-start;
-  padding: 2em 5em;
-  height: 314px;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+footer nav div {
+  width: 60%;
+  padding: 1.5em 1em;
+}
+
+.logo-footer img {
+  width: 60px;
+}
+
+.redesSociais-footer {
+  visibility: visible;
+  display: flex;
+  justify-content: space-around;
 }
 
 .atendimento,
 .sobre,
 .unidades {
-  padding: 1em;
-  width: 25%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
   height: 100%;
+}
+
+h3 {
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
 .itens {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   height: 80%;
 }
 
 .itens a {
   text-decoration: none;
-  font-size: 14px;
+  font-size: 1em;
+
   color: #fff;
 }
 
 @media (min-width: 501px) {
   body {
-    background-color: purple;
+    /* background-color: purple; */
   }
   /* header */
   .logo {
@@ -251,9 +274,22 @@ footer {
     margin-left: 1em;
   }
 
-  .instagram,
-  .youtube {
+  .redesSociais .instagram,
+  .redesSociais .youtube {
     visibility: visible;
+  }
+
+  .banner {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../assets/cachorro-rosa-desktop.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   /* banner */
@@ -267,58 +303,60 @@ footer {
 
   /* seções */
 
+  section {
+    height: 100vh;
+    width: 100%;
+  
+    padding: 2em;
+  }
+
   .mordomiaSaudavel {
     background-size: 100% 50%;
     background-repeat: no-repeat;
     background-position: bottom;
-    background-color: color-mix(
-      in srgb,
-      rgba(235, 74, 123, 1) 35%,
-      rgba(253, 106, 154, 1) 100%
-    );
   }
 
   .banhoTosa {
     color: #252525;
     display: flex;
-  
-    background-image: url("../assets/cachorro-marom.png");
+
+    background-image: url("../assets/cachorro-marrom-desktop.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: top;
     /* background-color: #f4f2f3; */
   }
-  
+
   .banhoTosa div,
   .mordomiaSaudavel div {
     height: 100vh;
-  
+
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  
+
   .banhoTosa div h2,
   .mordomiaSaudavel div h2 {
     font-size: 49px;
   }
-  
+
   .banhoTosa div p,
   .mordomiaSaudavel div p {
     font-size: 27px;
   }
-  
+
   .txt-banhoTosa {
     width: 38%;
     padding: 1em 0;
     left: 80%;
   }
-  
+
   .txt-banhoTosa p,
   .txt-mordomiaSaudavel p {
     padding: 1em 0;
   }
-  
+
   .btn-faleConosco {
     width: 250px;
     border-radius: 50px;
@@ -327,24 +365,24 @@ footer {
     padding: 1.2em;
     text-decoration: none;
   }
-  
+
   .txt-banhoTosa a {
     background-color: #3a342f;
     color: #f4f2f3;
   }
-  
+
   .mordomiaSaudavel {
     color: #ffffff;
     display: flex;
     justify-content: end;
-  
-    background-image: url("../assets/cachorro-preto.png");
+
+    background-image: url("../assets/cachorro-preto-desktop.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: top;
     background-color: #fd6a9a;
   }
-  
+
   .txt-mordomiaSaudavel {
     /* padding: 2em; */
     width: 30%;
@@ -353,57 +391,71 @@ footer {
     margin-right: 10%;
     font-weight: normal;
   }
-  
+
   .txt-mordomiaSaudavel a {
     background-color: #fff;
     color: #3a342f;
   }
-  
+
   .apoio {
     height: 112px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
+
   .apoio p {
     color: #fd6a9a;
     font-size: 24px;
     font-style: italic;
   }
-  
+
   .apoio img {
     height: 25px;
     width: 172px;
   }
-  
-  footer{
-    background-color: #EB4A7B;
+
+  footer nav{
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
-    padding: 2em 5em;
+    padding: 2em;
     height: 314px;
+    width: 100%;
   }
-  
+
+  footer nav div{
+    /* padding: 0; */
+  }
+
+  .logo-footer,
+  .redesSociais-footer {
+    display: none;
+  }
+
+  footer{
+    height: 60vh;
+  }
   .atendimento,
   .sobre,
-  .unidades{
-    padding: 1em;
-    width: 25%;
+  .unidades {
+    /* padding: 1em; */
+    width: 30%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
   }
-  
-  .itens{
+
+  .itens {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 80%;
+    /* height: 80%; */
   }
-  
-  .itens a{
+
+  .itens a {
     text-decoration: none;
     font-size: 14px;
     color: #fff;
